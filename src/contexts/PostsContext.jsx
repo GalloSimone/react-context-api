@@ -1,4 +1,4 @@
-import React,{ Children, createContext,useContest, useContext } from "react";
+import React,{ createContext, useContext } from "react";
 
 const PostsContext = createContext();
 const noticeBoard =[
