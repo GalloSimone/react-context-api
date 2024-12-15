@@ -6,7 +6,7 @@ const PostsList = () => {
   const posts = usePosts();
 
   return (
-    <div>
+    <div className='row'>
       {posts.map(post => (
         <PostCard key={post.id} post={post} />
       ))}
