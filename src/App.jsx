@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 //Contexts
-import PostsProvider from './contexts/PostsContext';
+import {PostProvider} from './contexts/PostsContext';
 
 
 
@@ -12,13 +12,12 @@ import AlternativeLayout from './layouts/AlternativeLayout';
 // pages
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-//import PizzasIndexPage from './pages/PizzasIndexPage';
-//import PizzasShowPage from './pages/PizzasShowPage';
 import NotFoundPage from './pages/NotFoundPage';
+import PostPage from "./components/PostsPage"
 
 function App() {
   return (
-    <PostsProvider>
+    <PostProvider>
     <BrowserRouter>
       <Routes>
         {/* Rotte con layout classico */}
@@ -26,16 +25,13 @@ function App() {
           <Route index Component={HomePage} />
           <Route path="/about" Component={AboutPage} />
           <Route path="*" Component={NotFoundPage} />
-          
-
+          <Route path='/posts' Component={PostPage}/>
         </Route>
-
         {/* Rotte con layout alternativo */}
         <Route Component={AlternativeLayout}>{/*  */}</Route>
       </Routes>
     </BrowserRouter>
-    </PostsProvider>
+    </PostProvider>
   );
 }
-
 export default App;

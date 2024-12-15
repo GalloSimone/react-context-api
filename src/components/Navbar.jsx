@@ -30,7 +30,7 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="/pizzas">
+              <NavLink className="nav-link" aria-current="page" to="/posts">
                 Posts
               </NavLink>
             </li>
